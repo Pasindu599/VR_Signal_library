@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(SignalAnalysis main.cpp
         eeg/statical_properties.h
-        stats/mad.h)
+        stats/mad.h
+        ecg/ecg_findRpeaks.h)
