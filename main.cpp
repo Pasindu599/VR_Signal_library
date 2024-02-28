@@ -1,14 +1,21 @@
 #include <iostream>
 
 #include "./eeg/statical_properties.h"
+#include "./stats/mad.h"
+#include "./ecg/ecg_findRpeaks.h"
 
 int main() {
-    std::vector<double> data = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    std::cout << "Mean: " << mean(data) << std::endl;
-    std::cout << "Variance: " << variance(data) << std::endl;
-    std::cout << "Standard Deviation: " << standardDeviation(data) << std::endl;
-    std::cout << "Median: " << median(data) << std::endl;
-    std::cout << "RMS: " << rms(data) << std::endl;
-    std::cout << "Entropy: " << entropy(data) << std::endl;
+
+    std::vector<double> ecgSignal = {0.1, 0.3, 0.8, 1.2, 1.5, 1.0, 0.7, 0.4, -0.8, 0.1};
+
+    std::vector<double> rPeaks = findRPeaks(ecgSignal);
+
+
+    std::cout << "Detected R-peaks at indices: ";
+    for (double peakIndex : rPeaks) {
+        std::cout << peakIndex << " ";
+    }
+    std::cout << std::endl;
+
     return 0;
 }
