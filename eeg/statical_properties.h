@@ -14,7 +14,7 @@
 /**
  * Calculate the mean of the data
  * @param data
- * @return
+ * @return mean value
  */
 
 static double mean(const std::vector<double>& data) {
@@ -29,7 +29,7 @@ static double mean(const std::vector<double>& data) {
 /**
  * Calculate the variance of the data
  * @param data
- * @return
+ * @return variance value
  */
 
 static double variance(const std::vector<double>& data) {
@@ -44,7 +44,7 @@ static double variance(const std::vector<double>& data) {
 /**
  * Calculate the standard deviation of the data
  * @param data
- * @return
+ * @return standard deviation value
  */
 
 static double standardDeviation(const std::vector<double>& data) {
@@ -54,7 +54,7 @@ static double standardDeviation(const std::vector<double>& data) {
 /**
  * Calculate the median of the data
  * @param data
- * @return
+ * @return median value
  */
 static double median(const std::vector<double>& data) {
     std::vector<double> sortedData = data;
@@ -70,7 +70,7 @@ static double median(const std::vector<double>& data) {
 /**
  * Calculate the root mean square of the data
  * @param data
- * @return
+ * @return rms value
  */
 static double rms(const std::vector<double>& data) {
     double sum = 0;
@@ -83,7 +83,7 @@ static double rms(const std::vector<double>& data) {
 /**
  * Calculate the entropy of the data
  * @param data
- * @return
+ * @return entropy value
  */
 static double entropy(const std::vector<double>& data) {
     std::vector<double> sortedData = data;
